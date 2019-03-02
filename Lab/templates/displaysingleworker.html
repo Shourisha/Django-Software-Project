@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% extends 'Base.html' %}
+    {% block base %}
+    {% load staticfiles %}
+    <meta charset="UTF-8">
+    <title>Worker Details</title>
+</head>
+
+<body>
+
+<h1>Worker Details</h1>
+
+  <div class="singleinfo">
+
+        <div>
+            <p class="tag">Worker First Name :</p>
+            <p class="text">{{ worker.Firstname }}</p>
+            <p></p>
+        </div>
+
+        <div>
+            <p class="tag">Worker Last Name :</p>
+            <p class="text">{{ worker.Lastname }}</p>
+            <p></p>
+        </div>
+
+        <div>
+            <p class="tag">Worker Age :</p>
+            <p class="text">{{ worker.Age }}</p>
+            <p></p>
+        </div>
+
+        <div>
+            <p class="tag">Worker Project :</p>
+            <a class="text" href="/Lab/project/{{ worker.Project.to_url }}">{{ worker.Project.to_name }}</a>
+            <p></p>
+        </div>
+
+  </div>
+
+
+</body>
+{% endblock %}
+</html>

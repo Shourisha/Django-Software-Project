@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <a href="/Tool"><button>Back</button></a>
+    <table style="border: 2px solid grey; margin: 10px;">
+        {% for m,n in data.items %}
+        <tr>
+            <td style="border: 2px solid grey;">{{ m }}</td>
+            <td style="border: 2px solid grey;">{{ n }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

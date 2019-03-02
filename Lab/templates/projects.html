@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% extends 'Base.html' %}
+    {% block base %}
+    {% load staticfiles %}
+    <title>Projects</title>
+</head>
+<body>
+
+
+{% for i in projects %}
+
+<div class="info">
+
+    <div>
+        <p class="tag">Project name: </p>
+        <p></p>
+        <a class="text" href="/Lab/project/{{ i.to_url }}">{{ i.Name }}</a>
+    </div>
+    <p></p>
+    <div>
+        <p class="tag">Project Budget: </p>
+        <p></p>
+        <p class="text"> $ {{ i.Budget }} </p>
+    </div>
+
+</div>
+{% endfor %}
+{% endblock %}
+</body>
+
+</html>

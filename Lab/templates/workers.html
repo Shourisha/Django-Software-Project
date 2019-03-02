@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% extends 'Base.html' %}
+    {% block base %}
+    {% load staticfiles %}
+    <meta charset="UTF-8">
+    <title>Workers</title>
+
+</head>
+<body>
+
+{% for i in workers %}
+
+<div class="info_worker">
+
+    <div>
+        <p class="tag">Worker first name: </p>
+        <p></p>
+        <a class="text" href="/Lab/people/{{ i.to_url }}">{{ i.Firstname }}</a>
+    </div>
+    <p></p>
+    <div>
+        <p class="tag">Worker last name: </p>
+        <p></p>
+        <p class="text">{{ i.Lastname }}</p>
+    </div>
+    <p></p>
+    <div>
+        <p class="tag">Worker Age: </p>
+        <p></p>
+        <p class="text"> {{ i.Age }} </p>
+    </div>
+
+</div>
+
+{% endfor %}
+</body>
+{% endblock %}
+</html>

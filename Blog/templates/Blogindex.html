@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% extends 'Base.html' %}
+    {% block base %}
+    {% load staticfiles %}
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a href="/Blog/create" id="crtbtn"><button>Create New Blog Post</button></a>
+
+
+{% for i in blogs %}
+
+    <div class="blog">
+        <p> {{ i.Title }} </p>
+        <p> {{ i.Body }} </p>
+        <p></p>
+    </div>
+
+{% endfor %}
+
+</body>
+{% endblock %}
+</html>
